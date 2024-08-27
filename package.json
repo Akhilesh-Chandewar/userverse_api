@@ -2,10 +2,10 @@
   "name": "userverse_api",
   "version": "1.0.0",
   "description": "Comprehensive and user-centric system, making it an apt choice for a user management platform.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon src/index.ts",
-    "start": "node dist/index.js",
+    "dev": "nodemon src/server.ts",
+    "start": "node dist/server.js",
     "build": "npx tsc",
     "prepare": "husky"
   },
