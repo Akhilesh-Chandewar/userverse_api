@@ -4,8 +4,14 @@
   "description": "Comprehensive and user-centric system, making it an apt choice for a user management platform.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "node test.js",
+    "start": "node index.js",
+    "prepare": "husky"
   },
   "author": "Akhilesh Chandewar",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9"
+  }
 }
