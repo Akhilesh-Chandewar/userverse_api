@@ -1,0 +1,11 @@
+{
+  "name": "userverse_api",
+  "version": "1.0.0",
+  "description": "Comprehensive and user-centric system, making it an apt choice for a user management platform.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Akhilesh Chandewar",
+  "license": "ISC"
+}
