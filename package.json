@@ -11,7 +11,9 @@
     "lint:fix": "eslint --fix",
     "format:check": "prettier . --check",
     "format:fix": "prettier . --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "migrate:dev": "cross-env MIGRATE_MODE=development node scripts/migrations.js",
+    "migrate:prod": "cross-env MIGRATE_MODE=production node scripts/migrations.js"
   },
   "author": "Akhilesh Chandewar",
   "license": "ISC",

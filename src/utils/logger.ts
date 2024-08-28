@@ -98,6 +98,8 @@ const FileTransport = (): Array<FileTransportInstance> => {
     ]
 }
 
+
+
 export default createLogger({
     defaultMeta: {
         meta: {}
