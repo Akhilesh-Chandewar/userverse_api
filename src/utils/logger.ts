@@ -1,10 +1,13 @@
 import util from 'util'
-import { createLogger, format, transports } from 'winston'
-import { ConsoleTransportInstance, FileTransportInstance } from 'winston/lib/winston/transports'
-import config from '../config/config'
-import { EApplicationEnvironment } from '../constants/application'
 import path from 'path'
+import config from '../config/config'
+import { createLogger, format, transports } from 'winston'
+import { EApplicationEnvironment } from '../constants/application'
 import { red, blue, yellow, green, magenta } from 'colorette'
+import { ConsoleTransportInstance, FileTransportInstance } from 'winston/lib/winston/transports'
+import * as sourceMapSupport from 'source-map-support'
+
+sourceMapSupport.install()
 
 const colorizeLevel = (level: string) => {
     switch (level) {
