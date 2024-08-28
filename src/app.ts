@@ -6,6 +6,8 @@ import httpError from './utils/httpError';
 import responseMessage from './constants/responseMessage';
 import helmet from 'helmet';
 import cors from 'cors';
+import limiter from './config/rateLimiter';
+import logger from './utils/logger';
 
 const app:Application = express();
 
@@ -20,6 +22,9 @@ app.use(
 )
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../', 'public')));
+
+app.use(limiter)
+logger.info(`RATE_LIMITER_INITIATED`)
 
 app.use('/api/v1/', router);
 

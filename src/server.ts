@@ -16,9 +16,6 @@ void (async () => {
             }
         });
 
-        // initRateLimiter(connection)
-        // logger.info(`RATE_LIMITER_INITIATED`)
-
         logger.info(`APPLICATION_STARTED`, {
             meta: {
                 PORT: config.PORT,
