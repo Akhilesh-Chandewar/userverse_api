@@ -4,10 +4,20 @@ import path from 'path';
 import globalErrorHandler from './middleware/globalErrorHandler';
 import httpError from './utils/httpError';
 import responseMessage from './constants/responseMessage';
+import helmet from 'helmet';
+import cors from 'cors';
 
 const app:Application = express();
 
 // middleware
+app.use(helmet())
+app.use(
+    cors({
+        methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'HEAD'],
+        // origin: ['https://client.com'],
+        credentials: true
+    })
+)
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../', 'public')));
 
