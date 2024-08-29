@@ -12,8 +12,7 @@
     "format:check": "prettier . --check",
     "format:fix": "prettier . --fix",
     "prepare": "husky",
-    "migrate:dev": "sequelize-cli db:migrate",
-    "migrate:prod" : "sequelize-cli db:migrate --config ./config/config.json --migrations-path dist/src/migrations --models-path dist/src/models"
+    "migrate:dev": "sequelize-cli db:migrate"
   },
   "author": "Akhilesh Chandewar",
   "license": "ISC",
