@@ -21,7 +21,7 @@ export const up = async (queryInterface: QueryInterface): Promise<void> => {
       unique: true,
     },
     phone: {
-      type: DataTypes.STRING(15),
+      type: DataTypes.STRING(10),
       allowNull: false,
       unique: true,
     },
