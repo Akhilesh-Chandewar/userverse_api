@@ -1,0 +1,169 @@
+{
+    "info": {
+        "_postman_id": "4beb04cc-5834-4fa7-9186-28b338028a53",
+        "name": "Userverse api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "user",
+            "item": [
+                {
+                    "name": "Register user",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/user",
+                            "path": [
+                                "api",
+                                "v1",
+                                "user"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{ \n  \"firstName\" : \"Akhilesh\",\n  \"lastName\" : \"Chandewar\", \n  \"email\" : \"akhil.chaar00@gmail.com\", \n  \"phone\": \"800716532\" \n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Get all users (with optional filters)",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/user/",
+                            "path": [
+                                "api",
+                                "v1",
+                                "user"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        }
+                    }
+                },
+                {
+                    "name": "Read a specific user by ID",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/user/3",
+                            "path": [
+                                "api",
+                                "v1",
+                                "user",
+                                "3"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        }
+                    }
+                },
+                {
+                    "name": "Update a specific user by ID",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/user/3",
+                            "path": [
+                                "api",
+                                "v1",
+                                "user",
+                                "3"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"lastName\" : \"cha\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete a specific user by ID",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/user/1",
+                            "path": [
+                                "api",
+                                "v1",
+                                "user",
+                                "1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Self",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/api/v1/self",
+                    "path": [
+                        "api",
+                        "v1",
+                        "self"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "Health Check",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/api/v1/health",
+                    "path": [
+                        "api",
+                        "v1",
+                        "health"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        }
+    ]
+}

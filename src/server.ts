@@ -1,7 +1,7 @@
 import config from './config/config';
 import app from './app';
 import logger from './utils/logger';
-import databaseService from './services/databaseService';
+import databaseService, { sequelize } from './services/databaseService';
 
 const server = app.listen(config.PORT);
 
@@ -10,6 +10,14 @@ void (async () => {
         // Database Connection
         const connection = await databaseService.connect();
         logger.info(`DATABASE_CONNECTION`, {
+            meta: {
+                DIALECT: connection.getDialect(),
+                DATABASE_PATH: config.DATABASE_URL
+            }
+        });
+
+        await sequelize.sync();
+        logger.info(`DATABASE SYNCED`, {
             meta: {
                 DIALECT: connection.getDialect(),
                 DATABASE_PATH: config.DATABASE_URL

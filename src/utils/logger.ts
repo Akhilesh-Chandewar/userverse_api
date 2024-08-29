@@ -45,17 +45,18 @@ const consoleLogFormat = format.printf((info) => {
 })
 
 const consoleTransport = (): Array<ConsoleTransportInstance> => {
-    if (config.ENV === EApplicationEnvironment.DEVELOPMENT) {
+    if (config.ENV === EApplicationEnvironment.DEVELOPMENT as EApplicationEnvironment) {
         return [
             new transports.Console({
                 level: 'info',
                 format: format.combine(format.timestamp(), consoleLogFormat)
             })
-        ]
+        ];
     }
 
-    return []
-}
+    return [];
+};
+
 
 const fileLogFormat = format.printf((info) => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
@@ -97,8 +98,6 @@ const FileTransport = (): Array<FileTransportInstance> => {
         })
     ]
 }
-
-
 
 export default createLogger({
     defaultMeta: {

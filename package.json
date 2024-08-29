@@ -11,9 +11,7 @@
     "lint:fix": "eslint --fix",
     "format:check": "prettier . --check",
     "format:fix": "prettier . --fix",
-    "prepare": "husky",
-    "migrate:dev": "cross-env MIGRATE_MODE=development node scripts/migrations.js",
-    "migrate:prod": "cross-env MIGRATE_MODE=production node scripts/migrations.js"
+    "prepare": "husky"
   },
   "author": "Akhilesh Chandewar",
   "license": "ISC",
@@ -38,6 +36,7 @@
     "lint-staged": "^15.2.9",
     "nodemon": "^3.1.4",
     "prettier": "3.3.3",
+    "sequelize-cli": "^6.6.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.3.0"

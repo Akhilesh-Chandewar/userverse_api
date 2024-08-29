@@ -24,7 +24,12 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../', 'public')));
 
 app.use(limiter)
-logger.info(`RATE_LIMITER_INITIATED`)
+logger.info(`RATE_LIMITER_INITIATED` , {
+    meta : {
+        RATE_LIMIT_WINDOW_MS : '5 mins',
+        RATE_LIMIT_MAX : 20
+    }
+})
 
 app.use('/api/v1/', router);
 
